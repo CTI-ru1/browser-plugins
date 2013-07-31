@@ -1,0 +1,53 @@
+<html>
+     <head>
+         <script src="jquery-2.0.3.min.js"></script>
+         <style>
+            body {
+                 font-size: 120%;
+                 font-family: Helvetica, Arial, sans-serif;
+                 padding: 0.75em;
+                 margin: 0;
+                 min-width: 45em;
+                text-align:center;
+             }
+
+             h1 {
+                 font-size: 200%;
+                 font-weight: bold;
+                 color: #222;
+                 letter-spacing: -1px;
+                 padding: 0;
+                 margin: 0;
+                 text-align:center;
+             }
+         </style>
+         <img src="ulogo48.png">
+     </head>
+     <h1> Options:</h1><br/>
+     <body>
+           <form id="theForm" name = "capform" accept-charset="utf-8" style="align:center;" >
+                  <select id = "testbed" name="testbed">
+                            <option value="0">Select Testbed:</option>
+                            <option value="1">Testbed 1</option>
+                            <option value="2">Testbed 2</option>
+                            <option value="3">Testbed 3</option>
+                            <option value="4">Testbed 4</option>
+                            <option value="5">Testbed 5</option>
+                            <option value="6">Testbed 6</option>
+                  </select>
+                  <select id = "nodes" name= "nodes">
+                            <option value="0">Select Node:</option>
+                  </select>
+                  <select id="capabilities" name= "capabilities">
+                            <option value="0">Select Capability:</option>
+                  </select>
+                  <br><br>
+                  <input type="submit" id="submit" value="Submit">
+           </form>
+            <div id="selected"></div><br/>
+            <div id="t"></div> <div id="n"></div> <div id="c"></div>
+
+         <script src="options.js"></script>
+    </body>
+
+ </html>

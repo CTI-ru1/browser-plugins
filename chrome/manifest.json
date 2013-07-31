@@ -1,0 +1,22 @@
+{
+  "name": "Uberdust controller",
+  "version": "0.1.0.0",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "background": { "page":"background.html", "persistent":true},
+  "description": "Browser plugin to control a selected device with a single click",
+  "browser_action": {
+      "name": "Click to turn on-off the light"
+  
+  },
+  "icons": { "16": "ulogo16.png",
+             "48": "ulogo48.png",
+            "128": "ulogo128.png" },
+
+  "options_page": "options.html",
+    "permissions": [
+        "tabs","https://*/*", "http://*/*","storage"
+    ]
+
+
+}
