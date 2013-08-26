@@ -77,6 +77,8 @@ chrome.storage.local.get('data', function (obj) {
 
         var data = document.getElementById("testbed").value+"+"+document.getElementById("nodes").value+"+"+document.getElementById("capabilities").value;
         chrome.storage.local.set({'data': data}); //contact with your background page and send the form data.
+        //from : http://stackoverflow.com/questions/17129197/reload-chrome-extension-after-taking-user-input-from-options-page
+        chrome.extension.getBackgroundPage().window.location.reload()
 
     });
 
