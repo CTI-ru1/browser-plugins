@@ -16,6 +16,12 @@ function show(val) {
     'Device Status Changed: '+val      // The body.
   );
   notification.show();
+  // Auto-hide after a while
+  notification.ondisplay = function(event) {
+    setTimeout(function() {
+    event.currentTarget.cancel();
+    }, 3000);
+  };
 }
 
 function loadSettings(obj){
