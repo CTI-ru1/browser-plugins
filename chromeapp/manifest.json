@@ -1,0 +1,19 @@
+{
+  "name": "Uberdust",
+  "description": "Interconnecting and controlling smart devices with the web. Plug your sensor or actuator and see your data appear in your browser.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "ulogo128.png",
+    "48": "ulogo48.png",
+    "16": "ulogo16.png"
+  },
+  "app": {
+    "urls": [
+      "http://uberdust.cti.gr/"
+    ],
+    "launch": {
+      "web_url": "http://uberdust.cti.gr/"
+    }
+  }
+}
