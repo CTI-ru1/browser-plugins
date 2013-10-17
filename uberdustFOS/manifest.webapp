@@ -1,0 +1,14 @@
+{
+  "name": "uberdust-controller",
+  "description": "This app provides the ability to controll uberdust connected devices",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png",
+    "60": "/img/icon-60.png"
+  },
+  "developer": {
+    "name": "Dimitrios Amaxilatis",
+	"url":"http://uberdust.cti.gr"
+  },
+  "default_locale": "en"
+}
