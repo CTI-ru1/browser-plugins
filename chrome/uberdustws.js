@@ -7,11 +7,7 @@ function connect(hostname, node, capability, action) {
     var mysock_id = sock_count;
     sock_count++;
 
-    var host = "ws://" + hostname + "/readings.ws";
-
-    var protocol = "SUB@" + node + "@" + capability;
-    var encodedProtocol = protocol.replace(/@/g, ".").replace(/:/g, "--");
-
+    var host = "ws://" + hostname + "/" + node + "/" + capability + "/readings.ws";
 
     try {
 
@@ -22,12 +18,12 @@ function connect(hostname, node, capability, action) {
                 return -1;
             }
             else {
-                sockets[mysock_id] = new MozWebSocket(host, encodedProtocol);
+                sockets[mysock_id] = new MozWebSocket(host);
                 console.log("You have a browser that supports MozWebSockets");
             }
         }
         else {
-            sockets[mysock_id] = new WebSocket(host, encodedProtocol);
+            sockets[mysock_id] = new WebSocket(host);
         }
         sockets[mysock_id].onopen = function () {
             console.log("socket.onopen");

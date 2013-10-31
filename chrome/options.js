@@ -9,11 +9,25 @@ chrome.storage.local.get('data', function (obj) {
     document.getElementById("n").innerHTML=" Node:"+node;
     document.getElementById("c").innerHTML=" Capability:"+capability;
 });
+  
+
+
 // get testbed
     var testbed =document.getElementById("testbed");
+    var getAllTestbeds = "http://uberdust.cti.gr/rest/testbed/json";
+    $.get(getAllTestbeds ,function(data){
+      testbed.options[0]=new Option("Select Testbed:","0");
+       for(var i=0;i<data.length;i++){
+	    var obj = data[i];
+            testbed.options[i+1]=new Option(obj["testbedName"], obj["testbedId"]);
+      }
+    });
+    
+    
+    
     testbed.addEventListener('change', function(){
     console.log("Testbed "+testbed.value);
-    var url='http://uberdust.cti.gr/rest/testbed/'+testbed.value+'/node/raw';
+    var url='http://uberdust.cti.gr/rest/testbed/'+testbed.value+'/virtualnode/raw';
     $.get(url,function(data){
 
         var nodes=data.split("\n");
